@@ -55,7 +55,7 @@ export default new Vuex.Store({
       });
     },
     deleteSmoothie: (context, payload) => {
-      axios.delete(context.state.axiosURL + 'deleteSmoothie/?id=' + payload.id)
+      axios.delete(context.state.axiosURL + 'deleteSmoothie/' + payload.id)
         .then(() => {
           context.commit('DELETE_SMOOTHIE', payload.index);
         }).catch(err => {
@@ -64,7 +64,7 @@ export default new Vuex.Store({
     },
     getSmoothieById: (context, payload) => {
       context.dispatch('setIsLoading', true);
-      axios.get(context.state.axiosURL + 'editSmoothie/?id=' + payload)
+      axios.get(context.state.axiosURL + 'editSmoothie/' + payload)
         .then(smoothie => {
           context.commit('SET_EDITABLE_SMOOTHIE', smoothie.data);
         }).catch(err => {
@@ -73,7 +73,7 @@ export default new Vuex.Store({
     },
     updateSmoothie: (context, payload) => {
       context.dispatch('setIsLoading', true);
-      axios.put(context.state.axiosURL + 'updateSmoothie/?id=' + payload.id, payload.smoothie, {
+      axios.put(context.state.axiosURL + 'updateSmoothie/' + payload.id, payload.smoothie, {
         headers: {
           'content-type': 'application/json'
         }

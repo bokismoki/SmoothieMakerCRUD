@@ -2,6 +2,6 @@ const router = require('express').Router();
 
 const deleteSmoothieController = require('../controllers/deleteSmoothie');
 
-router.delete('/', deleteSmoothieController);
+router.delete('/:id', deleteSmoothieController);
 
 module.exports = router;
