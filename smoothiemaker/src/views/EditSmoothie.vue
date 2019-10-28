@@ -41,7 +41,7 @@ export default {
           .then(() => {
             setTimeout(() => {
               this.$router.push({ name: "smoothies" });
-              this.$store.dispatch('setIsLoading', false);
+              this.$store.dispatch("setIsLoading", false);
             }, 500);
           });
       }
@@ -64,56 +64,57 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .edit-smoothie {
   justify-items: center;
   margin-top: 5em;
   padding: 0 10em;
   display: flex;
   flex-direction: column;
-}
-.edit-smoothie .title {
-  color: rgb(38, 90, 187);
-  font-size: 2.5em;
-  text-align: center;
-}
-.edit-smoothie .edit-smoothie-form {
-  display: flex;
-  flex-direction: column;
-  width: 600px;
-  margin: 3em auto 0;
-}
-.edit-smoothie-form label {
-  color: #777;
-  margin-bottom: 1em;
-}
-.edit-smoothie-form input {
-  border: none;
-  border-bottom: 1px solid #444;
-  margin-bottom: 3em;
-}
-.edit-smoothie .added-ingredients {
-  display: flex;
-  flex-direction: column;
-}
-.edit-smoothie .wrap {
-  display: flex;
-  justify-content: space-between;
-}
-.edit-smoothie .trash {
-  opacity: 0.5;
-  cursor: pointer;
-}
-.edit-smoothie .edit-smoothie-btn {
-  align-self: center;
-  background-color: rgb(238, 44, 83);
-  color: #fff;
-  text-transform: uppercase;
-  border: none;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
-  padding: 1em 2em;
-  cursor: pointer;
-  letter-spacing: 1px;
+  height: 100%;
+  .title {
+    color: rgb(38, 90, 187);
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .edit-smoothie-form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 3em auto 0;
+    label {
+      color: #777;
+      margin-bottom: 1em;
+    }
+    input {
+      border: none;
+      border-bottom: 1px solid #444;
+      margin-bottom: 3em;
+    }
+  }
+  .added-ingredients {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .trash {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .edit-smoothie-btn {
+    align-self: center;
+    background-color: rgb(238, 44, 83);
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    padding: 1em 2em;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
 }
 </style>

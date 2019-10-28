@@ -41,55 +41,56 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .smoothies {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   margin-top: 3.5em;
   padding: 0 10em;
-}
-.smoothie {
-  width: 350px;
-  height: 300px;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  padding: 2em;
-  position: relative;
-  margin-bottom: 3.5em;
-}
-.smoothie .edit {
-  position: absolute;
-  top: 0.8em;
-  right: 2.5em;
-  opacity: 0.5;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-.smoothie .trash {
-  position: absolute;
-  top: 0.8em;
-  right: 0.8em;
-  opacity: 0.5;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-.smoothie .smoothie-name {
-  text-align: center;
-  color: #265abb;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.smoothie .ingredients {
-  display: flex;
-  flex-wrap: wrap;
-}
-.smoothie .smoothie-ing {
-  color: #333;
-  background-color: #ddd;
-  border-radius: 50px;
-  margin: 0.2em;
-  padding: 0.5em;
+  .smoothie {
+    width: 350px;
+    height: 300px;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 2em;
+    position: relative;
+    margin-bottom: 3.5em;
+    overflow-y: auto;
+    .edit {
+      position: absolute;
+      top: 0.8em;
+      right: 2.5em;
+      opacity: 0.5;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .trash {
+      position: absolute;
+      top: 0.8em;
+      right: 0.8em;
+      opacity: 0.5;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .smoothie-name {
+      text-align: center;
+      color: #265abb;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ingredients {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .smoothie-ing {
+      color: #333;
+      background-color: #ddd;
+      border-radius: 50px;
+      margin: 0.2em;
+      padding: 0.5em;
+    }
+  }
 }
 </style>

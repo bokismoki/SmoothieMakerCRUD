@@ -43,11 +43,13 @@ export default {
 }
 body {
   font-family: "Times New Roman", Times, serif;
+  position: relative;
 }
 .smoothiesMaker {
+  padding-bottom: 5em;
   .nav {
     background-color: #265abb;
-    width: 100vw;
+    max-width: 100vw;
     height: 140px;
     position: relative;
     color: #fff;
@@ -78,6 +80,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     z-index: 1;
     background-color: #fff;
     width: 100%;

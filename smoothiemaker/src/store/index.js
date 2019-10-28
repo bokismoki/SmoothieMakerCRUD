@@ -43,6 +43,7 @@ export default new Vuex.Store({
         });
     },
     addSmoothie: (context, payload) => {
+      context.dispatch('setIsLoading', true);
       axios.post(context.state.axiosURL + 'addSmoothie', payload, {
         headers: {
           'content-type': 'application/json'
